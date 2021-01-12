@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneDrive URL Parser</title>
+    <script>
+        function createURL(){
+            var username = document.getElementById('uname').value;
+            var urlBegin = "<a href=\"https://sunynp-my.sharepoint.com/personal/";
+            var urlEnd = "_newpaltz_edu\">OneDrive Link</a>";
+            var url = urlBegin + username + urlEnd
+            document.getElementById('odURL').innerHTML = url;
+
+        }
+    </script>
+</head>
+<body>
+    <h1>OneDrive Fix</h1>
+    <label for="uname">Please enter your SUNY New Paltz Username: </label>
+    <input type="text" id="uname" name="uname">
+    <br>
+    <br>
+    <button onclick=createURL()>Create URL</button>
+    <p id="odURL"></p>
+    
+</body>
+</html>
